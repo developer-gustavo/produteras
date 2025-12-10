@@ -1,6 +1,67 @@
-<!-- eslint-disable vue/no-restricted-v-bind -->
+<script setup lang="ts">
+const cursos = [
+  {
+    id: 1,
+    titulo: 'Imersão: Destrave sua Carreira em Produto',
+    descricao:
+      'Uma imersão prática de 3 dias para você que quer fazer a transição ou acelerar sua carreira em produto.',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop',
+    categorias: ['carreira', 'produto'],
+    aoVivo: true,
+    tempo: '15h de conteúdo',
+    encontros: '3 encontros',
+    data: '14 de janeiro de 2026',
+    preco: 'R$ 797,00',
+    link: '/cursos/imersao-destrave-sua-carreira',
+  },
+  {
+    id: 2,
+    titulo: 'Discovery Avançado: Do Problema ao MVP',
+    descricao:
+      'Domine técnicas modernas de Product Discovery e valide suas ideias antes de construir.',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop',
+    categorias: ['discovery', 'produto'],
+    aoVivo: true,
+    tempo: '20h de conteúdo',
+    encontros: '5 encontros',
+    data: '02 de março de 2026',
+    preco: 'R$ 1.297,00',
+    link: '/cursos/curso-discovery-avancado',
+  },
+]
+
+const team = [
+  {
+    name: 'Ana Silva',
+    role: 'Fundadora',
+    position: 'Fundadora da ProduterasBR | Head de Produto',
+    about:
+      'Com mais de 10 anos de experiência em produto, Ana já liderou times em empresas como Nubank e iFood. Apaixonada por mentoria e desenvolvimento de carreira.',
+    picture:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face',
+    linkedin: 'https://linkedin.com/in/anasilva',
+    instagram: 'https://instagram.com/anasilva',
+    badgeColor: 'amber-500',
+  },
+
+  {
+    name: 'Mariana Costa',
+    role: 'Cofundadora',
+    position: 'Cofundadora da ProduterasBR | Product Lead',
+    about:
+      'Especialista em discovery e estratégia de produto. Mariana já passou por startups e grandes empresas, sempre focada',
+    picture:
+      'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
+    linkedin: 'https://linkedin.com/in/marianacosta',
+    instagram: 'https://instagram.com/marianacosta',
+    badgeColor: 'emerald-500',
+  },
+]
+</script>
+
 <template>
-  <section class="relative overflow-hidden">
+  <!-- eslint-disable vue/no-restricted-v-bind -->
+  <section id="principal" class="relative overflow-hidden">
     <div
       class="inset-0 h-full space-y-5 px-40 py-80 text-center"
       :style="{
@@ -62,7 +123,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section id="sobre">
     <div class="h-full space-y-2 bg-white px-40 py-20 text-center">
       <p class="text-md font-bold text-amber-500 uppercase">
         Sobre Nós
@@ -159,6 +220,192 @@
             Interação direta com instrutoras experientes, tirando dúvidas em tempo real.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+  <section id="cursos">
+    <div class="h-full space-y-2 bg-white px-40 py-20 text-start">
+      <p class="text-md font-bold text-amber-500 uppercase">
+        Nossos Cursos
+      </p>
+
+      <h1 class="text-5xl font-extrabold text-black">
+        Cursos em Destaque
+      </h1>
+
+      <p class="max-auto items-center text-start text-xl text-gray-500">
+        Conheça nossos cursos e imersões mais populares, criados por especialistas do mercado.
+      </p>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <article
+          v-for="curso in cursos"
+          :key="curso.id"
+          class="group relative overflow-hidden rounded-2xl border-2 border-neutral-200 bg-white transition-all duration-300 hover:border-emerald-500/40 hover:shadow-xl dark:border-neutral-700 dark:bg-neutral-900"
+        >
+          <div class="relative h-52 overflow-hidden">
+            <img
+              :src="curso.image"
+              :alt="curso.titulo"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            >
+
+            <div class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span
+                v-for="cat in curso.categorias"
+                :key="cat"
+                class="rounded-full border border-white/20 bg-white/70 px-3 py-1 text-xs font-semibold text-neutral-700 backdrop-blur-md dark:border-black/30 dark:bg-black/40 dark:text-neutral-200"
+              >
+                {{ cat }}
+              </span>
+            </div>
+
+            <div v-if="curso.aoVivo" class="absolute top-4 right-4">
+              <span class="flex items-center rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white">
+                <span class="mr-2 h-2 w-2 animate-pulse rounded-full bg-white" />
+                Ao vivo
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="line-clamp-2 text-xl font-bold text-neutral-900 transition-colors group-hover:text-emerald-600 dark:text-neutral-100">
+              {{ curso.titulo }}
+            </h3>
+
+            <p class="mt-2 line-clamp-2 text-neutral-600 dark:text-neutral-400">
+              {{ curso.descricao }}
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-4 text-sm text-neutral-600 dark:text-neutral-400">
+              <span class="flex items-center gap-1.5">⏰ {{ curso.tempo }}</span>
+              <span class="flex items-center gap-1.5">👥 {{ curso.encontros }}</span>
+            </div>
+
+            <div class="mt-4 rounded-lg border border-neutral-300 bg-neutral-100 p-3 dark:border-neutral-700 dark:bg-neutral-800">
+              <div class="flex items-center gap-2 text-sm">
+                📅
+                <span class="font-medium text-neutral-900 dark:text-neutral-100">Próxima turma:</span>
+                <span class="text-neutral-600 dark:text-neutral-400">{{ curso.data }}</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-200 pt-4 dark:border-neutral-700">
+              <div>
+                <p class="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+                  {{ curso.preco }}
+                </p>
+                <p class="text-xs text-neutral-600 dark:text-neutral-400">
+                  ou em até 12x
+                </p>
+              </div>
+
+              <NuxtLink
+                :href="curso.link"
+                class="flex h-11 items-center gap-2 rounded-lg bg-linear-to-r from-emerald-600 to-emerald-700 px-6 py-2 font-semibold text-white shadow-md transition-all hover:shadow-lg"
+              >
+                Ver detalhes →
+              </NuxtLink>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quem-somos">
+    <div class="h-full space-y-2 bg-white px-40 py-20 text-center">
+      <p class="text-md font-bold text-amber-500 uppercase">
+        Quem Somos
+      </p>
+      <h1 class="text-5xl font-extrabold text-black">
+        Conheça as Fundadoras
+      </h1>
+      <p class="max-auto items-center text-center text-xl text-gray-500">
+        Profissionais experientes e apaixonadas por desenvolver carreiras em produto.
+      </p>
+
+      <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+        <div
+          v-for="person in team"
+          :key="person.name"
+          class="group relative flex h-[550px] flex-col overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md"
+        >
+          <div class="relative h-72 w-full overflow-hidden">
+            <img
+              :src="person.picture"
+              :alt="person.name"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            >
+            <div class="from-card absolute inset-0 bg-linear-to-t via-transparent to-transparent" />
+          </div>
+
+          <div class="flex flex-1 flex-col p-6">
+            <div class="mb-2 flex gap-2">
+              <span class="rounded-full bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-500">
+                {{ person.role }}
+              </span>
+            </div>
+
+            <h3 class="text-foreground text-xl font-bold">
+              {{ person.name }}
+            </h3>
+            <p class="mt-1 text-sm font-medium text-emerald-600">
+              {{ person.position }}
+            </p>
+
+            <p class="text-muted-foreground mt-4 flex-1 text-sm leading-relaxed">
+              {{ person.about }}
+            </p>
+            <div class="mt-6 flex gap-3">
+              <NuxtLink
+                :href="person.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-secondary flex h-10 w-10 items-center justify-center rounded-lg text-gray-400 transition-colors hover:text-gray-700"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-linkedin h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </NuxtLink>
+
+              <NuxtLink
+                :href="person.instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-secondary flex h-10 w-10 items-center justify-center rounded-lg text-gray-400 transition-colors hover:text-gray-700"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-instagram h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="final" class="relative overflow-hidden">
+    <div class="inset-0 h-full space-y-10 bg-linear-to-br  from-emerald-400  to-cyan-900 p-40 text-center">
+      <button class="text-md w-50 rounded-full border bg-amber-500/10 px-2 py-1 font-bold text-amber-500/90 ">
+        Vagas Limitadas
+      </button>
+      <h1 class="text-5xl font-extrabold text-white">
+        Pronta para dar o próximo passo na sua carreira?
+      </h1>
+      <p class="text-xl text-white">
+        Junte-se a mais de 500 mulheres que já transformaram suas carreiras com a ProduterasBR Academy.
+      </p>
+      <div class="space-x-5">
+        <button class="w-80 rounded-2xl bg-amber-500 p-3 text-xl font-extrabold text-white  hover:bg-amber-600 hover:shadow-xl">
+          Ver Cursos Disponíveis
+        </button>
       </div>
     </div>
   </section>
