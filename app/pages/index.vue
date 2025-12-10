@@ -327,7 +327,7 @@ const team = [
         Profissionais experientes e apaixonadas por desenvolver carreiras em produto.
       </p>
 
-      <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+      <div class="mx-auto grid max-w-4xl gap-8 text-left md:grid-cols-2">
         <div
           v-for="person in team"
           :key="person.name"
