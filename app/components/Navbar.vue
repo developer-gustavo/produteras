@@ -2,10 +2,10 @@
 const isOpen = ref(false)
 
 const navLinks = [
-  { name: 'Home', to: '#sobre' },
-  { name: 'Cursos', to: '#publico' },
-  { name: 'Sobre', to: '#conteudo' },
-  { name: 'Contato', to: '#metodologia' },
+  { name: 'Home', to: '/' },
+  { name: 'Cursos', to: '#cursos' },
+  { name: 'Sobre', to: '/#sobre' },
+  { name: 'Contato', to: '/#contato' },
 
 ]
 
@@ -36,7 +36,7 @@ watch(y, scrollY => {
             <span class="absolute -bottom-1 left-0 h-0.5 w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
           </li>
         </ul>
-        <NuxtLink to="#inscricao" class="hidden rounded-lg bg-amber-500 px-5 py-1.5 font-bold text-white shadow transition hover:bg-amber-600 md:inline-block">
+        <NuxtLink to="/cursos" class="hidden rounded-lg bg-amber-500 px-5 py-1.5 font-bold text-white shadow transition hover:bg-amber-600 md:inline-block">
           Ver Cursos
         </NuxtLink>
       </div>

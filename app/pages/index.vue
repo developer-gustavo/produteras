@@ -89,9 +89,11 @@ const team = [
         <button class="w-80 rounded-2xl bg-amber-500 p-3 text-xl font-extrabold text-white  hover:bg-amber-600 hover:shadow-xl">
           Quero me inscrever
         </button>
-        <button class="w-80 rounded-2xl border border-white  bg-white/10 p-3 text-xl font-extrabold text-white  hover:bg-white/20 hover:shadow-xl">
-          Ver todos os Cursos
-        </button>
+        <NuxtLink to="/cursos">
+          <button class="w-80 rounded-2xl border border-white  bg-white/10 p-3 text-xl font-extrabold text-white  hover:bg-white/20 hover:shadow-xl">
+            Ver todos os Cursos
+          </button>
+        </NuxtLink>
       </div>
       <div class="flex items-center justify-center space-x-10 pt-10">
         <div class="flex flex-col items-center  text-white">
@@ -230,12 +232,18 @@ const team = [
       </p>
 
       <h1 class="text-5xl font-extrabold text-black">
-        Cursos em Destaque
+        Próximos Encontros
       </h1>
-
-      <p class="max-auto items-center text-start text-xl text-gray-500">
-        Conheça nossos cursos e imersões mais populares, criados por especialistas do mercado.
-      </p>
+      <div class="flex items-center  justify-between pb-4">
+        <p class="max-auto items-center text-start text-xl text-gray-500">
+          Conheça nossos cursos e imersões mais populares, criados por especialistas do mercado.
+        </p>
+        <NuxtLink to="/cursos">
+          <button class="bg-cyan border-cyan w-80 rounded-2xl  border-2 px-3 py-1.5 text-xl font-extrabold text-emerald-600  hover:bg-white/20 hover:shadow-xl">
+            Ver todos os Cursos
+          </button>
+        </NuxtLink>
+      </div>
 
       <div class="grid gap-8 md:grid-cols-2">
         <article
@@ -303,7 +311,7 @@ const team = [
               </div>
 
               <NuxtLink
-                :href="curso.link"
+                :href="`/cursos/${curso.id}`"
                 class="flex h-11 items-center gap-2 rounded-lg bg-linear-to-r from-emerald-600 to-emerald-700 px-6 py-2 font-semibold text-white shadow-md transition-all hover:shadow-lg"
               >
                 Ver detalhes →
