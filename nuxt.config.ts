@@ -19,10 +19,13 @@ export default defineNuxtConfig({
     production: PRODUCTION,
     url: SITE_URL,
     sessionPassword: NUXT_SESSION_PASSWORD,
+    mercadopagoAccessToken: process.env.MERCADO_PAGO_ACCESS_TOKEN
   },
   devServer: {
-    host: DEV_URL,
-    https: DEV_KEY && DEV_CERT ? { key: DEV_KEY, cert: DEV_CERT } : undefined,
+    host: 'https://localhost:3000',
+
+    //host: DEV_URL,
+   // https: DEV_KEY && DEV_CERT ? { key: DEV_KEY, cert: DEV_CERT } : undefined,
   },
   compatibilityDate: '2025-08-01',
   nitro: { experimental: { asyncContext: true } },

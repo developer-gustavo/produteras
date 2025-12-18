@@ -15,6 +15,8 @@ export const CursoSchema = z.object({
   linkAula: z.string().trim().optional(),
 
   inscricaoHabilitada: z.boolean().optional(),
+  iframe: z.boolean().optional(),
+
 })
 
 export type Curso = z.infer<typeof CursoSchema>

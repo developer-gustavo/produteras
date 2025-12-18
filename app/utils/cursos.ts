@@ -11,6 +11,8 @@ const cursos = [
     data: '14 de janeiro de 2026',
     preco: 'R$ 797,00',
     inscricaoHabilitada: true,
+    iframe: 'true',
+
   },
   {
     id: 2,
@@ -23,7 +25,7 @@ const cursos = [
     encontros: '5 encontros',
     data: '02 de março de 2026',
     preco: 'R$ 1.297,00',
-    inscricaoHabilitada: false,
+    iframe: 'false',
   },
 ]
 

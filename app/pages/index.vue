@@ -30,13 +30,13 @@ const cursos = [
   },
 ]
 
-const team = [
+const funders = [
   {
-    name: 'Ana Silva',
-    role: 'Fundadora',
+    name: 'Fernanda Carvalho',
+    role: 'Fundadora | Co-criadora da ProduterasBR',
     position: 'Fundadora da ProduterasBR | Head de Produto',
     about:
-      'Com mais de 10 anos de experiência em produto, Ana já liderou times em empresas como Nubank e iFood. Apaixonada por mentoria e desenvolvimento de carreira.',
+      'Apaixonada por impacto social e por Produtos Digitais, Fernanda idealizou a ProduterasBR a partir de uma necessidade real: criar um espaço seguro de troca, aprendizado e apoio entre mulheres de produto. Com experiência prática de mercado, acredita no poder da comunidade, na educação acessível e no protagonismo feminino como ferramentas de transformação de carreira.',
     picture:
       'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face',
     linkedin: 'https://linkedin.com/in/anasilva',
@@ -45,16 +45,51 @@ const team = [
   },
 
   {
-    name: 'Mariana Costa',
-    role: 'Cofundadora',
-    position: 'Cofundadora da ProduterasBR | Product Lead',
+    name: 'Djenane',
+    role: 'Co-fundadora | Co-criadora da ProduterasBR Academy',
+    position: 'Co-fundadora | Co-criadora da ProduterasBR Academy',
     about:
-      'Especialista em discovery e estratégia de produto. Mariana já passou por startups e grandes empresas, sempre focada',
+      'Djenane chegou para somar, fortalecer e expandir o sonho. Profissional incrível, abraçou a causa desde o início e foi peça-chave na evolução da comunidade para a criação da ProduterasBR Academy. Com olhar estratégico e humano, atua para transformar conhecimento em ação e apoiar mulheres a se desenvolverem e ocuparem espaços de destaque no mercado de Produto.',
     picture:
       'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
     linkedin: 'https://linkedin.com/in/marianacosta',
     instagram: 'https://instagram.com/marianacosta',
     badgeColor: 'emerald-500',
+  },
+]
+const team = [
+  {
+    name: 'Marcelo Albuquerque',
+    role: 'Tecnologista sênior do CBPF',
+    image: '/professores/marcelo.png',
+    linkedin: 'https://www.linkedin.com/in/marceloportesdealbuquerque',
+  },
+  {
+    name: 'Mariana Bottino',
+    role: `Doutora em Biologia Molecular
+pela UFRJ e Assessora de
+Inovação e Empreendedorismo
+do NIT Rio`,
+    image: '/professores/mariana.png',
+    linkedin: 'https://www.linkedin.com/in/mariana-carnavale-bottino-b9797627',
+  },
+  {
+    name: 'Patricia Coimbra',
+    role: `Assessora de Propriedade Intelectual
+do NIT Rio e mestre em
+Propriedade Intelectual pelo
+Instituto Nacional de Tecnologia`,
+    image: '/professores/patriciaa.png',
+    linkedin: 'https://www.linkedin.com/in/𝐏𝐚𝐭𝐫𝐢𝐜𝐢𝐚-𝐂𝐨𝐢𝐦𝐛𝐫𝐚-b0880b75',
+  },
+  {
+    name: 'Neila Barbosa',
+    role: `Mestre em Inovação e
+Propriedade Intelectual pelo
+Instituto Nacional da Propriedade
+Industrial (INPI)`,
+    image: '/professores/neila.png',
+    linkedin: 'https://www.linkedin.com/in/neila-barbosa-a8243839',
   },
 ]
 </script>
@@ -134,16 +169,17 @@ const team = [
         Sobre a ProduterasBR Academy
       </h1>
       <p class="max-auto items-center text-center text-xl text-gray-500">
-        Somos uma comunidade de mulheres apaixonadas por produto e tecnologia. Nossa missão é capacitar e conectar profissionais, oferecendo conteúdo de qualidade, networking e oportunidades de crescimento. Acreditamos que juntas somos mais fortes e podemos transformar o mercado de produto no Brasil.
+        Somos uma comunidade de mulheres apaixonadas por produto e tecnologia. Nossa missão é fortalecer, conectar e desenvolver mulheres que atuam com Produtos Digitais, por meio de uma comunidade segura e uma formação prática, promovendo crescimento profissional, protagonismo e impacto no mercado.
+
       </p>
       <div class=" mt-16 grid  gap-8 md:grid-cols-3">
-        <div
-          class="group relative rounded-2xl border-2 border-gray-100 bg-white p-8 text-left
+                <div
+          class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
          backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
         >
           <div
             class="mb-6 flex h-14 w-14 items-center justify-center
-              rounded-xl bg-linear-to-br from-emerald-400 to-cyan-900
+              rounded-xl  bg-linear-to-br from-emerald-400 to-cyan-900
               transition-transform duration-300 group-hover:scale-110"
           >
             <svg
@@ -151,23 +187,19 @@ const team = [
               class="h-7 w-7 text-white"
               fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
             >
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
             </svg>
           </div>
 
           <h3 class="mb-3 text-xl font-semibold text-black">
-            Comunidade Forte
+            Sororidade
           </h3>
 
           <p class="text-gray-400">
-            Faça parte de uma rede de mulheres em produto que se apoiam e crescem juntas.
+            Acreditamos na união entre mulheres como força de transformação.
           </p>
         </div>
-
-        <div
+              <div
           class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
          backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
         >
@@ -188,11 +220,73 @@ const team = [
           </div>
 
           <h3 class="mb-3 text-xl font-semibold text-black">
-            Foco Prático
+            Espaço Seguro
           </h3>
 
           <p class="text-gray-400">
-            Aprenda com cases reais e exercícios que você pode aplicar imediatamente.
+            Incentivamos mulheres a ocuparem espaços de decisão e liderança.
+          </p>
+        </div>
+        <div
+          class="group relative rounded-2xl border-2 border-gray-100 bg-white p-8 text-left
+         backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
+        >
+        
+          <div
+            class="mb-6 flex h-14 w-14 items-center justify-center
+              rounded-xl bg-linear-to-br from-emerald-400 to-cyan-900
+              transition-transform duration-300 group-hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 text-white"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-semibold text-black">
+            Protagonismo Feminino
+
+          </h3>
+
+          <p class="text-gray-400">
+            Faça parte de uma rede de mulheres em produto que se apoiam e crescem juntas.
+          </p>
+        </div>
+
+  
+
+
+        <div
+          class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
+         backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
+        >
+          <div
+            class="mb-6 flex h-14 w-14 items-center justify-center
+              rounded-xl  bg-linear-to-br from-emerald-400 to-cyan-900
+              transition-transform duration-300 group-hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 text-white"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+            >
+              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-semibold text-black">
+            Aprendizado Contínuo
+
+          </h3>
+
+          <p class="text-gray-400">
+           A evolução faz parte da nossa essência. Aprender é um compromisso constante.
           </p>
         </div>
 
@@ -215,13 +309,47 @@ const team = [
           </div>
 
           <h3 class="mb-3 text-xl font-semibold text-black">
-            Ao Vivo
+             Trocas Reais
+
+
           </h3>
 
           <p class="text-gray-400">
-            Interação direta com instrutoras experientes, tirando dúvidas em tempo real.
+           Valorizamos conversas honestas, experiências práticas e aprendizados compartilhados.
           </p>
         </div>
+
+         <div
+          class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
+         backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
+        >
+          <div
+            class="mb-6 flex h-14 w-14 items-center justify-center
+              rounded-xl  bg-linear-to-br from-emerald-400 to-cyan-900
+              transition-transform duration-300 group-hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 text-white"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+            >
+              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+            </svg>
+          </div>
+
+          <h3 class="mb-3 text-xl font-semibold text-black">
+             Impacto
+
+
+          </h3>
+
+          <p class="text-gray-400">
+           Trabalhamos para gerar mudanças reais nas carreiras, nos produtos e na sociedade.
+          </p>
+        </div>
+        
+        
+        
       </div>
     </div>
   </section>
@@ -337,18 +465,17 @@ const team = [
 
       <div class="mx-auto grid max-w-4xl gap-8 text-left md:grid-cols-2">
         <div
-          v-for="person in team"
+          v-for="person in funders"
           :key="person.name"
-          class="group relative flex h-[550px] flex-col overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md"
+          class="group relative flex  flex-col overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md"
         >
-          <div class="relative h-72 w-full overflow-hidden">
-            <img
-              :src="person.picture"
-              :alt="person.name"
-              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            >
-            <div class="from-card absolute inset-0 bg-linear-to-t via-transparent to-transparent" />
-          </div>
+         <div class="relative h-72 w-full overflow-hidden">
+          <img
+            :src="person.picture"
+            :alt="person.name"
+            class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          >
+        </div>
 
           <div class="flex flex-1 flex-col p-6">
             <div class="mb-2 flex gap-2">
@@ -417,4 +544,46 @@ const team = [
       </div>
     </div>
   </section>
+<section id="team" class="my-12">
+  <p
+    class="font-poppins mb-10 text-2xl bg-black bg-clip-text text-center  font-bold text-transparent md:text-4xl"
+  >
+    Conheça os Professores
+  </p>
+
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div
+      v-for="person in team"
+      :key="person.name"
+      class="flex min-h-[320px] flex-col items-center text-center"
+    >
+      <div class="flex size-40 items-center justify-center rounded-full bg-gradient-to-b from-orange-600/80 to-orange-300">
+        <img
+          :src="person.image"
+          :alt="person.name"
+          class="-mt-3 h-44 w-40 rounded-full object-cover"
+        >
+      </div>
+
+      <div class="mt-4 rounded-md bg-amber-500 px-3 py-1 text-sm font-semibold text-white">
+        {{ person.name }}
+      </div>
+
+      <p class="mt-2 flex-1 whitespace-pre-line text-sm text-black">
+        {{ person.role }}
+      </p>
+
+      <a
+        :href="person.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-auto flex justify-center"
+      >
+        <!-- ícone aqui se quiser -->
+      </a>
+    </div>
+  </div>
+</section>
+
+
 </template>

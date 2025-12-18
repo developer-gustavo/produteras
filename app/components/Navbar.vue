@@ -3,7 +3,7 @@ const isOpen = ref(false)
 
 const navLinks = [
   { name: 'Home', to: '/' },
-  { name: 'Cursos', to: '#cursos' },
+  { name: 'Cursos', to: '/cursos' },
   { name: 'Sobre', to: '/#sobre' },
   { name: 'Contato', to: '/#contato' },
 
