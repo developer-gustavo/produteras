@@ -1,7 +1,12 @@
-import { MercadoPagoConfig, Preference } from 'mercadopago';
+import { MercadoPagoConfig, Preference } from 'mercadopago'
 
-export const client = new MercadoPagoConfig({ 
- accessToken: useRuntimeConfig().mpAccessToken
-});
+export const getMPClient = () => {
+  const config = useRuntimeConfig()
+  return new MercadoPagoConfig({
+    accessToken: config.mpAccessToken,
+  })
+}
 
-export const preference = new Preference(client);
+export const getMPPreference = () => {
+  return new Preference(getMPClient())
+}

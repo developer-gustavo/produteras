@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 
-const { PRODUCTION, SITE_URL, NUXT_SESSION_PASSWORD, MAIL_PASSWORD, MAIL_URL, MAIL_PORT, MAIL_SSL, MAIL_USERNAME, DEV_URL, DEV_KEY, DEV_CERT, MERCADO_PAGO_ACCESS_TOKEN } = process.env
+const { PRODUCTION, SITE_URL, NUXT_SESSION_PASSWORD, MAIL_PASSWORD, MAIL_URL, MAIL_PORT, MAIL_SSL, MAIL_USERNAME, DEV_URL, DEV_KEY, DEV_CERT, MP_ACCESS_TOKEN, GOOGLE_SHEETS_WEBHOOK_URL } = process.env
 
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/seo', '@vueuse/nuxt'],
@@ -19,8 +19,8 @@ export default defineNuxtConfig({
     production: PRODUCTION,
     url: SITE_URL,
     sessionPassword: NUXT_SESSION_PASSWORD,
-    mpAccessToken: process.env.MP_ACCESS_TOKEN,
-    googleSheetsUrl: process.env.GOOGLE_SHEETS_WEBHOOK_URL,
+    mpAccessToken: MP_ACCESS_TOKEN,
+    googleSheetsUrl: GOOGLE_SHEETS_WEBHOOK_URL,
   },
   devServer: {
 
