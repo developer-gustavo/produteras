@@ -9,7 +9,7 @@ const cursos = [
     tempo: '15h de conteúdo',
     encontros: '3 encontros',
     data: '14 de janeiro de 2026',
-    preco: 'R$ 797,00',
+    preco: 2,
     inscricaoHabilitada: true,
     iframe: 'true',
 
@@ -24,7 +24,7 @@ const cursos = [
     tempo: '20h de conteúdo',
     encontros: '5 encontros',
     data: '02 de março de 2026',
-    preco: 'R$ 1.297,00',
+    preco: 1,
     iframe: 'false',
   },
 ]

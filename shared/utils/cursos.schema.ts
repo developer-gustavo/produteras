@@ -10,10 +10,8 @@ export const CursoSchema = z.object({
   tempo: z.string().trim().min(1, { message: 'Informe a duração/tempo do curso' }),
   encontros: z.string().trim().min(1, { message: 'Informe o número de encontros' }),
   data: z.string().trim().min(1, { message: 'Informe a data do curso' }),
-  preco: z.string().trim().min(1, { message: 'Informe o preço' }),
-
+  preco: z.number().int().min(1, { message: 'Informe o preço' }),
   linkAula: z.string().trim().optional(),
-
   inscricaoHabilitada: z.boolean().optional(),
   iframe: z.boolean().optional(),
 

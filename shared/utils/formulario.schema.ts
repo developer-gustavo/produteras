@@ -42,7 +42,7 @@ export const formularioSchema = z
     motivacao: z
       .union([z.string(), z.number()])
       .transform(Number)
-      .refine((v) => v >= 1 && v <= 10, {
+      .refine(v => v >= 1 && v <= 10, {
         message: 'Motivação deve ser entre 1 e 10',
       }),
 
@@ -53,15 +53,14 @@ export const formularioSchema = z
     satisfacao: z
       .union([z.string(), z.number()])
       .transform(Number)
-      .refine((v) => v >= 1 && v <= 10, {
+      .refine(v => v >= 1 && v <= 10, {
         message: 'Satisfação deve ser entre 1 e 10',
       }),
   })
   .superRefine((data, ctx) => {
-    if (
-      data.objetivos.includes('Outro') &&
-      !data.objetivoOutro?.trim()
-    ) {
+    if(
+      data.objetivos.includes('Outro') && !data.objetivoOutro?.trim()
+    ){
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: 'Especifique o objetivo',
