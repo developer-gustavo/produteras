@@ -170,10 +170,9 @@ Industrial (INPI)`,
       </h1>
       <p class="max-auto items-center text-center text-xl text-gray-500">
         Somos uma comunidade de mulheres apaixonadas por produto e tecnologia. Nossa missão é fortalecer, conectar e desenvolver mulheres que atuam com Produtos Digitais, por meio de uma comunidade segura e uma formação prática, promovendo crescimento profissional, protagonismo e impacto no mercado.
-
       </p>
       <div class=" mt-16 grid  gap-8 md:grid-cols-3">
-                <div
+        <div
           class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
          backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
         >
@@ -199,7 +198,7 @@ Industrial (INPI)`,
             Acreditamos na união entre mulheres como força de transformação.
           </p>
         </div>
-              <div
+        <div
           class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
          backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
         >
@@ -231,7 +230,6 @@ Industrial (INPI)`,
           class="group relative rounded-2xl border-2 border-gray-100 bg-white p-8 text-left
          backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
         >
-        
           <div
             class="mb-6 flex h-14 w-14 items-center justify-center
               rounded-xl bg-linear-to-br from-emerald-400 to-cyan-900
@@ -251,16 +249,12 @@ Industrial (INPI)`,
 
           <h3 class="mb-3 text-xl font-semibold text-black">
             Protagonismo Feminino
-
           </h3>
 
           <p class="text-gray-400">
             Faça parte de uma rede de mulheres em produto que se apoiam e crescem juntas.
           </p>
         </div>
-
-  
-
 
         <div
           class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
@@ -282,11 +276,10 @@ Industrial (INPI)`,
 
           <h3 class="mb-3 text-xl font-semibold text-black">
             Aprendizado Contínuo
-
           </h3>
 
           <p class="text-gray-400">
-           A evolução faz parte da nossa essência. Aprender é um compromisso constante.
+            A evolução faz parte da nossa essência. Aprender é um compromisso constante.
           </p>
         </div>
 
@@ -309,17 +302,15 @@ Industrial (INPI)`,
           </div>
 
           <h3 class="mb-3 text-xl font-semibold text-black">
-             Trocas Reais
-
-
+            Trocas Reais
           </h3>
 
           <p class="text-gray-400">
-           Valorizamos conversas honestas, experiências práticas e aprendizados compartilhados.
+            Valorizamos conversas honestas, experiências práticas e aprendizados compartilhados.
           </p>
         </div>
 
-         <div
+        <div
           class="group relative rounded-2xl border-2 border-gray-100 bg-white  p-8 text-left
          backdrop-blur transition-all duration-300 hover:border-amber-500/40 hover:shadow-xl"
         >
@@ -338,18 +329,13 @@ Industrial (INPI)`,
           </div>
 
           <h3 class="mb-3 text-xl font-semibold text-black">
-             Impacto
-
-
+            Impacto
           </h3>
 
           <p class="text-gray-400">
-           Trabalhamos para gerar mudanças reais nas carreiras, nos produtos e na sociedade.
+            Trabalhamos para gerar mudanças reais nas carreiras, nos produtos e na sociedade.
           </p>
         </div>
-        
-        
-        
       </div>
     </div>
   </section>
@@ -469,13 +455,13 @@ Industrial (INPI)`,
           :key="person.name"
           class="group relative flex  flex-col overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md"
         >
-         <div class="relative h-72 w-full overflow-hidden">
-          <img
-            :src="person.picture"
-            :alt="person.name"
-            class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-          >
-        </div>
+          <div class="relative h-72 w-full overflow-hidden">
+            <img
+              :src="person.picture"
+              :alt="person.name"
+              class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            >
+          </div>
 
           <div class="flex flex-1 flex-col p-6">
             <div class="mb-2 flex gap-2">
@@ -544,46 +530,44 @@ Industrial (INPI)`,
       </div>
     </div>
   </section>
-<section id="team" class="my-12">
-  <p
-    class="font-poppins mb-10 text-2xl bg-black bg-clip-text text-center  font-bold text-transparent md:text-4xl"
-  >
-    Conheça os Professores
-  </p>
-
-  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div
-      v-for="person in team"
-      :key="person.name"
-      class="flex min-h-[320px] flex-col items-center text-center"
+  <section id="team" class="my-12">
+    <p
+      class="font-poppins mb-10 bg-black bg-clip-text text-center text-2xl  font-bold text-transparent md:text-4xl"
     >
-      <div class="flex size-40 items-center justify-center rounded-full bg-gradient-to-b from-orange-600/80 to-orange-300">
-        <img
-          :src="person.image"
-          :alt="person.name"
-          class="-mt-3 h-44 w-40 rounded-full object-cover"
-        >
-      </div>
+      Conheça os Professores
+    </p>
 
-      <div class="mt-4 rounded-md bg-amber-500 px-3 py-1 text-sm font-semibold text-white">
-        {{ person.name }}
-      </div>
-
-      <p class="mt-2 flex-1 whitespace-pre-line text-sm text-black">
-        {{ person.role }}
-      </p>
-
-      <a
-        :href="person.linkedin"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-auto flex justify-center"
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div
+        v-for="person in team"
+        :key="person.name"
+        class="flex min-h-[320px] flex-col items-center text-center"
       >
+        <div class="flex size-40 items-center justify-center rounded-full bg-gradient-to-b from-orange-600/80 to-orange-300">
+          <img
+            :src="person.image"
+            :alt="person.name"
+            class="-mt-3 h-44 w-40 rounded-full object-cover"
+          >
+        </div>
+
+        <div class="mt-4 rounded-md bg-amber-500 px-3 py-1 text-sm font-semibold text-white">
+          {{ person.name }}
+        </div>
+
+        <p class="mt-2 flex-1 text-sm whitespace-pre-line text-black">
+          {{ person.role }}
+        </p>
+
+        <a
+          :href="person.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-auto flex justify-center"
+        >
         <!-- ícone aqui se quiser -->
-      </a>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 </template>

@@ -1,19 +1,19 @@
 import { defineNuxtPlugin } from '#app'
 import mercadopago from 'mercadopago'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(nuxtApp => {
   // Configura token
   // @ts-ignore
-  mercadopago.configurations.setAccessToken(process.env.MERCADO_PAGO_ACCESS_TOKEN)
+  mercadopago.configurations.setAccessToken(MERCADO_PAGO_ACCESS_TOKEN)
 
   const criarPreferencia = async ({
     nomeCurso,
     valorCurso,
     emailUsuario,
   }: {
-    nomeCurso: string
-    valorCurso: number
-    emailUsuario?: string
+    nomeCurso: string,
+    valorCurso: number,
+    emailUsuario?: string,
   }): Promise<string> => {
     const preference = {
       items: [
