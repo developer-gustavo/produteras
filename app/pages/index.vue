@@ -57,41 +57,7 @@ const funders = [
     badgeColor: 'emerald-500',
   },
 ]
-const team = [
-  {
-    name: 'Marcelo Albuquerque',
-    role: 'Tecnologista sênior do CBPF',
-    image: '/professores/marcelo.png',
-    linkedin: 'https://www.linkedin.com/in/marceloportesdealbuquerque',
-  },
-  {
-    name: 'Mariana Bottino',
-    role: `Doutora em Biologia Molecular
-pela UFRJ e Assessora de
-Inovação e Empreendedorismo
-do NIT Rio`,
-    image: '/professores/mariana.png',
-    linkedin: 'https://www.linkedin.com/in/mariana-carnavale-bottino-b9797627',
-  },
-  {
-    name: 'Patricia Coimbra',
-    role: `Assessora de Propriedade Intelectual
-do NIT Rio e mestre em
-Propriedade Intelectual pelo
-Instituto Nacional de Tecnologia`,
-    image: '/professores/patriciaa.png',
-    linkedin: 'https://www.linkedin.com/in/𝐏𝐚𝐭𝐫𝐢𝐜𝐢𝐚-𝐂𝐨𝐢𝐦𝐛𝐫𝐚-b0880b75',
-  },
-  {
-    name: 'Neila Barbosa',
-    role: `Mestre em Inovação e
-Propriedade Intelectual pelo
-Instituto Nacional da Propriedade
-Industrial (INPI)`,
-    image: '/professores/neila.png',
-    linkedin: 'https://www.linkedin.com/in/neila-barbosa-a8243839',
-  },
-]
+
 </script>
 
 <template>
@@ -527,46 +493,6 @@ Industrial (INPI)`,
         <button class="w-80 rounded-2xl bg-amber-500 p-3 text-xl font-extrabold text-white  hover:bg-amber-600 hover:shadow-xl">
           Ver Cursos Disponíveis
         </button>
-      </div>
-    </div>
-  </section>
-  <section id="team" class="my-12">
-    <p
-      class="font-poppins mb-10 bg-black bg-clip-text text-center text-2xl  font-bold text-transparent md:text-4xl"
-    >
-      Conheça os Professores
-    </p>
-
-    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-      <div
-        v-for="person in team"
-        :key="person.name"
-        class="flex min-h-[320px] flex-col items-center text-center"
-      >
-        <div class="flex size-40 items-center justify-center rounded-full bg-gradient-to-b from-orange-600/80 to-orange-300">
-          <img
-            :src="person.image"
-            :alt="person.name"
-            class="-mt-3 h-44 w-40 rounded-full object-cover"
-          >
-        </div>
-
-        <div class="mt-4 rounded-md bg-amber-500 px-3 py-1 text-sm font-semibold text-white">
-          {{ person.name }}
-        </div>
-
-        <p class="mt-2 flex-1 text-sm whitespace-pre-line text-black">
-          {{ person.role }}
-        </p>
-
-        <a
-          :href="person.linkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-auto flex justify-center"
-        >
-        <!-- ícone aqui se quiser -->
-        </a>
       </div>
     </div>
   </section>
