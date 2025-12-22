@@ -1,12 +1,15 @@
 import { z } from 'zod'
 
-export const formularioSchema = z
-  .object({
-    nome: z
-      .string()
-      .trim()
-      .min(3, 'Informe seu nome completo'),
+export const InfoPagamentoSchema = z.object({
+  id_transacao: z.number().optional(),
+  email: z.string().email().optional(),
+  nome: z.string().min(1, 'Nome é obrigatório'),
+  valor: z.number().positive(),
+  titulo_curso: z.string().optional().default('Curso Produteras'),
+  data_pagamento: z.string(),
+})
 
+<<<<<<< Updated upstream
     email: z
       .string()
       .trim()
@@ -71,3 +74,6 @@ export const formularioSchema = z
   })
 
 export type Formulario = z.infer<typeof formularioSchema>
+=======
+export type InfoPagamento = z.infer<typeof InfoPagamentoSchema>
+>>>>>>> Stashed changes

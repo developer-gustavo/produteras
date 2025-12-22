@@ -57,41 +57,6 @@ const funders = [
     badgeColor: 'emerald-500',
   },
 ]
-const team = [
-  {
-    name: 'Marcelo Albuquerque',
-    role: 'Tecnologista sênior do CBPF',
-    image: '/professores/marcelo.png',
-    linkedin: 'https://www.linkedin.com/in/marceloportesdealbuquerque',
-  },
-  {
-    name: 'Mariana Bottino',
-    role: `Doutora em Biologia Molecular
-pela UFRJ e Assessora de
-Inovação e Empreendedorismo
-do NIT Rio`,
-    image: '/professores/mariana.png',
-    linkedin: 'https://www.linkedin.com/in/mariana-carnavale-bottino-b9797627',
-  },
-  {
-    name: 'Patricia Coimbra',
-    role: `Assessora de Propriedade Intelectual
-do NIT Rio e mestre em
-Propriedade Intelectual pelo
-Instituto Nacional de Tecnologia`,
-    image: '/professores/patriciaa.png',
-    linkedin: 'https://www.linkedin.com/in/𝐏𝐚𝐭𝐫𝐢𝐜𝐢𝐚-𝐂𝐨𝐢𝐦𝐛𝐫𝐚-b0880b75',
-  },
-  {
-    name: 'Neila Barbosa',
-    role: `Mestre em Inovação e
-Propriedade Intelectual pelo
-Instituto Nacional da Propriedade
-Industrial (INPI)`,
-    image: '/professores/neila.png',
-    linkedin: 'https://www.linkedin.com/in/neila-barbosa-a8243839',
-  },
-]
 </script>
 
 <template>
@@ -544,6 +509,7 @@ Industrial (INPI)`,
       </div>
     </div>
   </section>
+<<<<<<< Updated upstream
 <section id="team" class="my-12">
   <p
     class="font-poppins mb-10 text-2xl bg-black bg-clip-text text-center  font-bold text-transparent md:text-4xl"
@@ -586,4 +552,6 @@ Industrial (INPI)`,
 </section>
 
 
+=======
+>>>>>>> Stashed changes
 </template>
