@@ -72,23 +72,34 @@ import cursos from '~/utils/cursos'
               </div>
             </div>
 
-            <div class="mt-6 flex items-center justify-between border-t border-neutral-200 pt-4 dark:border-neutral-700">
-              <div>
-                <p class="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+            <div
+              class="mt-6 flex flex-col gap-4 border-t border-neutral-200 pt-4
+                    sm:flex-row sm:items-center
+                    dark:border-neutral-700"
+            >
+              <div class="max-w-[65%] min-w-0 sm:max-w-none">
+                <p
+                  class="text-md font-bold break-words text-neutral-900
+                        dark:text-neutral-100"
+                >
                   {{ curso.preco }}
                 </p>
                 <p class="text-xs text-neutral-600 dark:text-neutral-400">
-                  ou em até 12x
+                  ou em até 10x
                 </p>
               </div>
 
               <NuxtLink
                 :href="`/cursos/${curso.id}`"
-                class="flex h-11 items-center gap-2 rounded-lg bg-linear-to-r from-emerald-600 to-emerald-700 px-6 py-2 font-semibold text-white shadow-md transition-all hover:shadow-lg"
+                class="ml-auto flex h-11 w-full shrink-0 items-center justify-center gap-2
+                      rounded-lg bg-linear-to-r from-emerald-600 to-emerald-700
+                      px-6 py-2 font-semibold text-white shadow-md
+                      transition-all hover:shadow-lg
+                      sm:w-auto"
               >
                 Ver detalhes →
               </NuxtLink>
-            </div>
+            </div>s
           </div>
         </article>
       </div>

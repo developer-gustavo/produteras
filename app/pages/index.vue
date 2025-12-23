@@ -1,63 +1,40 @@
 <script setup lang="ts">
-const cursos = [
-  {
-    id: 1,
-    titulo: 'Imersão: Destrave sua Carreira em Produto',
-    descricao:
-      'Uma imersão prática de 3 dias para você que quer fazer a transição ou acelerar sua carreira em produto.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop',
-    categorias: ['carreira', 'produto'],
-    aoVivo: true,
-    tempo: '15h de conteúdo',
-    encontros: '3 encontros',
-    data: '14 de janeiro de 2026',
-    preco: 'R$ 797,00',
-    link: '/cursos/imersao-destrave-sua-carreira',
-  },
-  {
-    id: 2,
-    titulo: 'Discovery Avançado: Do Problema ao MVP',
-    descricao:
-      'Domine técnicas modernas de Product Discovery e valide suas ideias antes de construir.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop',
-    categorias: ['discovery', 'produto'],
-    aoVivo: true,
-    tempo: '20h de conteúdo',
-    encontros: '5 encontros',
-    data: '02 de março de 2026',
-    preco: 'R$ 1.297,00',
-    link: '/cursos/curso-discovery-avancado',
-  },
-]
+import cursos from '~/utils/cursos'
 
 const funders = [
   {
     name: 'Fernanda Carvalho',
     role: 'Fundadora | Co-criadora da ProduterasBR',
     position: 'Fundadora da ProduterasBR | Head de Produto',
-    about:
-      'Apaixonada por impacto social e por Produtos Digitais, Fernanda idealizou a ProduterasBR a partir de uma necessidade real: criar um espaço seguro de troca, aprendizado e apoio entre mulheres de produto. Com experiência prática de mercado, acredita no poder da comunidade, na educação acessível e no protagonismo feminino como ferramentas de transformação de carreira.',
-    picture:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face',
-    linkedin: 'https://linkedin.com/in/anasilva',
-    instagram: 'https://instagram.com/anasilva',
+    about: {
+      intro:
+        'Apaixonada por impacto social e por Produtos Digitais, Fernanda idealizou a ProduterasBR a partir de uma necessidade real.',
+      story:
+        'Percebeu a falta de um espaço seguro de troca, aprendizado e apoio entre mulheres de produto.',
+      vision:
+        'Com experiência prática de mercado, acredita no poder da comunidade, na educação acessível e no protagonismo feminino como ferramentas de transformação de carreira.',
+    },
+    picture: '/Fernanda.jpeg',
+    linkedin: 'https://www.linkedin.com/in/fernandapcarvalho/',
     badgeColor: 'amber-500',
   },
-
   {
     name: 'Djenane',
     role: 'Co-fundadora | Co-criadora da ProduterasBR Academy',
     position: 'Co-fundadora | Co-criadora da ProduterasBR Academy',
-    about:
-      'Djenane chegou para somar, fortalecer e expandir o sonho. Profissional incrível, abraçou a causa desde o início e foi peça-chave na evolução da comunidade para a criação da ProduterasBR Academy. Com olhar estratégico e humano, atua para transformar conhecimento em ação e apoiar mulheres a se desenvolverem e ocuparem espaços de destaque no mercado de Produto.',
-    picture:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
-    linkedin: 'https://linkedin.com/in/marianacosta',
-    instagram: 'https://instagram.com/marianacosta',
+    about: {
+      intro:
+        'Djenane chegou para somar, fortalecer e expandir o sonho.',
+      story:
+        'Abraçou a causa desde o início e foi peça-chave na evolução da comunidade para a criação da ProduterasBR Academy.',
+      vision:
+        'Com olhar estratégico e humano, atua para transformar conhecimento em ação e apoiar mulheres a se desenvolverem e ocuparem espaços de destaque no mercado de Produto.',
+    },
+    picture: 'Djenane.png',
+    linkedin: 'https://www.linkedin.com/in/djenane/',
     badgeColor: 'emerald-500',
   },
 ]
-
 </script>
 
 <template>
@@ -127,7 +104,7 @@ const funders = [
     </div>
   </section>
   <section id="sobre">
-    <div class="h-full space-y-2 bg-white px-40 py-20 text-center">
+    <div class="h-full space-y-2 bg-white px-40 py-30 text-center">
       <p class="text-md font-bold text-amber-500 uppercase">
         Sobre Nós
       </p>
@@ -379,20 +356,30 @@ const funders = [
                 <span class="text-neutral-600 dark:text-neutral-400">{{ curso.data }}</span>
               </div>
             </div>
-
-            <div class="mt-6 flex items-center justify-between border-t border-neutral-200 pt-4 dark:border-neutral-700">
-              <div>
-                <p class="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+            <div
+              class="mt-6 flex flex-col gap-4 border-t border-neutral-200 pt-4
+                    sm:flex-row sm:items-center
+                    dark:border-neutral-700"
+            >
+              <div class="max-w-[65%] min-w-0 sm:max-w-none">
+                <p
+                  class="text-md font-bold break-words text-neutral-900
+                        dark:text-neutral-100"
+                >
                   {{ curso.preco }}
                 </p>
                 <p class="text-xs text-neutral-600 dark:text-neutral-400">
-                  ou em até 12x
+                  ou em até 10x
                 </p>
               </div>
 
               <NuxtLink
                 :href="`/cursos/${curso.id}`"
-                class="flex h-11 items-center gap-2 rounded-lg bg-linear-to-r from-emerald-600 to-emerald-700 px-6 py-2 font-semibold text-white shadow-md transition-all hover:shadow-lg"
+                class="ml-auto flex h-11 w-full shrink-0 items-center justify-center gap-2
+                      rounded-lg bg-linear-to-r from-emerald-600 to-emerald-700
+                      px-6 py-2 font-semibold text-white shadow-md
+                      transition-all hover:shadow-lg
+                      sm:w-auto"
               >
                 Ver detalhes →
               </NuxtLink>
@@ -419,7 +406,7 @@ const funders = [
         <div
           v-for="person in funders"
           :key="person.name"
-          class="group relative flex  flex-col overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md"
+          class="group relative flex flex-col overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md"
         >
           <div class="relative h-72 w-full overflow-hidden">
             <img
@@ -431,7 +418,9 @@ const funders = [
 
           <div class="flex flex-1 flex-col p-6">
             <div class="mb-2 flex gap-2">
-              <span class="rounded-full bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-500">
+              <span
+                class="rounded-full bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-500"
+              >
                 {{ person.role }}
               </span>
             </div>
@@ -439,13 +428,25 @@ const funders = [
             <h3 class="text-foreground text-xl font-bold">
               {{ person.name }}
             </h3>
+
             <p class="mt-1 text-sm font-medium text-emerald-600">
               {{ person.position }}
             </p>
 
-            <p class="text-muted-foreground mt-4 flex-1 text-sm leading-relaxed">
-              {{ person.about }}
-            </p>
+            <div class="text-muted-foreground mt-4 flex-1 space-y-3 text-sm leading-relaxed">
+              <p class="font-medium">
+                {{ person.about.intro }}
+              </p>
+
+              <p class="border-muted border-l-2 pl-3">
+                {{ person.about.story }}
+              </p>
+
+              <p class="italic">
+                {{ person.about.vision }}
+              </p>
+            </div>
+
             <div class="mt-6 flex gap-3">
               <NuxtLink
                 :href="person.linkedin"
@@ -453,23 +454,18 @@ const funders = [
                 rel="noopener noreferrer"
                 class="bg-secondary flex h-10 w-10 items-center justify-center rounded-lg text-gray-400 transition-colors hover:text-gray-700"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-linkedin h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="lucide lucide-linkedin h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect width="4" height="12" x="2" y="9" />
                   <circle cx="4" cy="4" r="2" />
-                </svg>
-              </NuxtLink>
-
-              <NuxtLink
-                :href="person.instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bg-secondary flex h-10 w-10 items-center justify-center rounded-lg text-gray-400 transition-colors hover:text-gray-700"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-instagram h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                 </svg>
               </NuxtLink>
             </div>

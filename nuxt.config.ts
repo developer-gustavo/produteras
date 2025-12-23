@@ -19,8 +19,8 @@ export default defineNuxtConfig({
     url: SITE_URL,
   },
   devServer: {
-    host: DEV_URL,
-    https: DEV_KEY && DEV_CERT ? { key: DEV_KEY, cert: DEV_CERT } : undefined,
+    // host: DEV_URL,
+    // https: DEV_KEY && DEV_CERT ? { key: DEV_KEY, cert: DEV_CERT } : undefined,
   },
   compatibilityDate: '2025-08-01',
   nitro: { experimental: { asyncContext: true } },

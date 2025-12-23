@@ -1,6 +1,3 @@
-<script setup lang="ts">
-const year = new Date().getFullYear()
-</script>
 
 <template>
   <section class="bg-white py-8 text-center text-black">
