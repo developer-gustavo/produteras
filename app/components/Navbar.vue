@@ -54,7 +54,7 @@ watch(y, scrollY => {
     <button type="button" class="absolute top-4 right-4 cursor-pointer border-none bg-transparent text-5xl text-orange-400 focus:outline-none" aria-label="Fechar menu" @click="isOpen = false">
       ×
     </button>
-    <ul class="flex flex-col items-center gap-8 text-lg font-semibold text-black">
+    <ul class="flex flex-col items-center gap-8 text-lg font-semibold text-amber-500">
       <li v-for="link in navLinks" :key="link.to" class="group relative">
         <NuxtLink :to="link.to" class="transition hover:text-orange-400" @click="isOpen = false">
           {{ link.name }}
