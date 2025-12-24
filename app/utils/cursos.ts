@@ -26,10 +26,13 @@ const cursos = [
     iframe: true,
     ementa: [],
     instrutora: {
-      nome: '',
-      cargo: '',
+      nome: 'Fernanda Carvalho',
+      cargo: 'Product Manager',
       foto: '/Fernanda.jpeg',
-
+      experiencia: '8+ anos em produtos digitais (backend, web e mobile)',
+      especialidades: ['Produtos financeiros', 'Pagamentos', 'BaaS', 'SaaS', 'B2B2C', 'B2B'],
+      formacao: 'Pós-graduação em Gestão Estratégica de Negócios – Mackenzie',
+      bio: 'Atua na interseção entre tecnologia, negócio e produto, conectando decisões técnicas a impacto real.',
     },
   },
   {
@@ -95,7 +98,7 @@ const cursos = [
     subDescricao:
       'Em 4 encontros ao vivo, você aplica IA como copiloto para acelerar discovery, prototipação, PRD, backlog e rollout — com método e critério.',
     image:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=500&fit=crop',
     problema:
       'Uso pontual de IA sem fluxo repetível, dificuldade de transformar insights em entregáveis claros e falta de método para acelerar sem perder qualidade.',
     solucao:
@@ -141,7 +144,67 @@ const cursos = [
       nome: 'Djenane Santos',
       cargo: 'Co-founder da ProduterasBR Academy',
       foto: '/Djenane.png',
-
+      experiencia: '8+ anos em produtos digitais (backend, web e mobile)',
+      especialidades: ['Produtos financeiros', 'Pagamentos', 'BaaS', 'SaaS', 'B2B2C', 'B2B'],
+      formacao: 'Pós-graduação em Gestão Estratégica de Negócios – Mackenzie',
+      bio: 'Atua na interseção entre tecnologia, negócio e produto, conectando decisões técnicas a impacto real.',
+    },
+  },
+  {
+    id: 4,
+    titulo: 'OKRs na Prática',
+    descricao:
+    'Aprenda a definir, acompanhar e negociar OKRs de verdade — do jeito que times de produto usam para transformar estratégia em execução mensurável.',
+    subDescricao:
+    'Em 4 encontros ao vivo, você vai dominar o método completo de OKRs: escrever objetivos fortes, criar Key Results de impacto, rodar check-ins produtivos e fechar ciclos com aprendizado real.',
+    image:
+    'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=500&fit=crop',
+    problema:
+    'Confunde OKR com KPI, escreve metas genéricas, transforma Key Results em tarefas e participa de check-ins que viram status report sem aprendizado. O problema não é falta de meta — é falta de clareza e governança para definir, acompanhar e ajustar OKRs sem cair no caos.',
+    solucao:
+    'Nesta trilha você aprende a diferenciar OKRs de KPIs, escrever Objetivos claros e Key Results de impacto, definir baseline e meta, conduzir check-ins sem microgerenciar e alinhar OKRs à estratégia do negócio com negociação e critério.',
+    aprendizado:
+    'Fundamentos de OKRs, escrita de Objetivos fortes, Key Results orientados a outcome, definição de baseline e metas, condução de check-ins produtivos, alinhamento estratégico e retrospectiva do ciclo.',
+    alvo:
+    'PMs e POs em início de carreira, analistas e júniores, líderes de squad e pessoas entrando em Produto que precisam alinhar roadmap, métricas e prioridades com objetivos claros. Não é para quem busca modelo pronto sem adaptar ou usar OKR como ferramenta de cobrança.',
+    categorias: ['produto', 'estratégia', 'carreira'],
+    aoVivo: true,
+    tempo: '8h de conteúdo',
+    encontros: '4 encontros',
+    data: '15 de janeiro de 2026',
+    preco: '10x R$42,00 ou R$378,00 no PIX',
+    inscricaoHabilitada: true,
+    iframe: true,
+    ementa: [
+      {
+        data: '15/01',
+        tema: 'Fundamentos e Mentalidade de OKRs',
+        entrega: 'Análise crítica de objetivos e identificação de bons OKRs',
+      },
+      {
+        data: '22/01',
+        tema: 'A Arte de Escrever Bons Key Results',
+        entrega: 'Transformação de tarefas em KRs de impacto (outcome)',
+      },
+      {
+        data: '29/01',
+        tema: 'O Ciclo de Vida do OKR',
+        entrega: 'Simulação de check-in e acompanhamento de progresso',
+      },
+      {
+        data: '05/02',
+        tema: 'Estratégia, Alinhamento e Closing',
+        entrega: 'Projeto final: conjunto completo de OKRs para um produto fictício',
+      },
+    ],
+    instrutora: {
+      nome: 'Melina Nobrega',
+      cargo: 'Co-founder da ProduterasBR Academy | Product Manager',
+      foto: '/melina.jpeg',
+      experiencia: '8+ anos em produtos digitais (backend, web e mobile)',
+      especialidades: ['Produtos financeiros', 'Pagamentos', 'BaaS', 'SaaS', 'B2B2C', 'B2B'],
+      formacao: 'Pós-graduação em Gestão Estratégica de Negócios – Mackenzie',
+      bio: 'Atua na interseção entre tecnologia, negócio e produto, conectando decisões técnicas a impacto real.',
     },
   },
 

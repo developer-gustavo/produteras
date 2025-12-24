@@ -71,7 +71,7 @@ const curso = cursoEncontrado
                   {{ curso.preco }}
                 </span>
                 <span class="text-xs font-bold tracking-widest text-slate-400 uppercase">
-                  até 10x sem juros
+                  em até 10x
                 </span>
               </div>
             </div>
@@ -142,28 +142,81 @@ const curso = cursoEncontrado
         v-if="curso.instrutora?.nome"
         class="rounded-[2.5rem] bg-slate-900 p-14 text-white"
       >
-        <div class="flex flex-col gap-8 md:flex-row md:items-center">
-          <img
-            v-if="curso.instrutora.foto"
-            :src="curso.instrutora.foto"
-            :alt="`Foto da instrutora ${curso.instrutora.nome}`"
-            class="h-24 w-24 shrink-0 rounded-full object-cover shadow-lg"
-          >
-
-          <div v-else class="h-24 w-24 shrink-0 rounded-full bg-slate-700" />
+        <div class="grid gap-10 md:grid-cols-[auto_1fr] md:items-start">
+          <div class="flex justify-center md:justify-start">
+            <img
+              v-if="curso.instrutora.foto"
+              :src="curso.instrutora.foto"
+              :alt="`Foto da instrutora ${curso.instrutora.nome}`"
+              class="h-28 w-28 rounded-full object-cover shadow-lg ring-4 ring-emerald-500/20"
+            >
+            <div
+              v-else
+              class="h-28 w-28 rounded-full bg-slate-700"
+            />
+          </div>
 
           <div>
-            <h2 class="text-2xl font-black">
+            <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase">
               Instrutora
+            </span>
+
+            <h2 class="mt-2 text-2xl font-black">
+              {{ curso.instrutora.nome }}
             </h2>
 
-            <p class="mt-2 text-xl font-medium text-emerald-400">
-              {{ curso.instrutora.nome }}
-            </p>
-
-            <p class="text-slate-400">
+            <p class="mt-1 font-medium text-emerald-300">
               {{ curso.instrutora.cargo }}
             </p>
+
+            <p
+              v-if="curso.instrutora.bio"
+              class="mt-6 max-w-2xl text-sm leading-relaxed text-slate-300"
+            >
+              {{ curso.instrutora.bio }}
+            </p>
+
+            <div
+              v-if="curso.instrutora.formacao || curso.instrutora.experiencia"
+              class="mt-8 grid gap-4 sm:grid-cols-2"
+            >
+              <div
+                v-if="curso.instrutora.experiencia"
+                class="rounded-xl bg-slate-800 p-4"
+              >
+                <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">
+                  Experiência
+                </p>
+                <p class="mt-1 text-sm text-slate-200">
+                  {{ curso.instrutora.experiencia }}
+                </p>
+              </div>
+
+              <div
+                v-if="curso.instrutora.formacao"
+                class="rounded-xl bg-slate-800 p-4"
+              >
+                <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">
+                  Formação
+                </p>
+                <p class="mt-1 text-sm text-slate-200">
+                  {{ curso.instrutora.formacao }}
+                </p>
+              </div>
+            </div>
+
+            <div
+              v-if="curso.instrutora.especialidades?.length"
+              class="mt-8 flex flex-wrap gap-2"
+            >
+              <span
+                v-for="(tag, index) in curso.instrutora.especialidades"
+                :key="index"
+                class="rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-300"
+              >
+                {{ tag }}
+              </span>
+            </div>
           </div>
         </div>
       </section>
