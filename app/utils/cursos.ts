@@ -21,18 +21,18 @@ const cursos = [
     tempo: '15h de conteúdo',
     encontros: '3 encontros',
     data: '14 de janeiro de 2026',
-    preco: '10x R$58,00 ou R$522,00 no PIX',
+    preco: 'R$522,00 no PIX ou em 10x R$58,00',
     inscricaoHabilitada: true,
     iframe: true,
     ementa: [],
     instrutora: {
       nome: 'Fernanda Carvalho',
-      cargo: 'Product Manager',
+      cargo: 'Idealizadora e Founder da ProduterasBR Academy',
       foto: '/Fernanda.jpeg',
-      experiencia: '8+ anos em produtos digitais (backend, web e mobile)',
-      especialidades: ['Produtos financeiros', 'Pagamentos', 'BaaS', 'SaaS', 'B2B2C', 'B2B'],
-      formacao: 'Pós-graduação em Gestão Estratégica de Negócios – Mackenzie',
-      bio: 'Atua na interseção entre tecnologia, negócio e produto, conectando decisões técnicas a impacto real.',
+      experiencia: 'Specialist Product Manager com mais de 20 anos de experiência na área de tecnologia, Construí uma carreira sólida ao longo de mais de 10 anos liderando estratégias de produto, growth e transformação digital em empresas de grande porte — conectando visão de negócio, dados e experiência do usuário para gerar impacto real em conversão, retenção e engajamento.)',
+      especialidades: ['Discovery', 'Delivery', 'Product Sense', 'Inovação', 'Transformação Digital'],
+      formacao: 'Bacharel em Psicologia e Jornalismo, Certificada em CSPO® | CPM®',
+      bio: 'Minha trajetória combina estratégia e execução: já escalei produtos digitais em nível internacional, reposicionando portfólios estratégicos e conduzindo iniciativas de SEO técnico e editorial, otimização de jornadas e campanhas de growth que elevaram KPIs críticos de tráfego, ranking e conversão. Atuo de ponta a ponta do ciclo de produto — do discovery ao go-to-market, integrando inovação tecnológica, marketing digital e gestão de stakeholders para entregar resultados sustentáveis e de alto impacto.',
     },
   },
   {
@@ -57,7 +57,7 @@ const cursos = [
     tempo: '8h de conteúdo',
     encontros: '4 encontros',
     data: '17 de janeiro a 21 de fevereiro de 2026',
-    preco: '10x R$39,00 ou R$351,00 no PIX',
+    preco: 'R$351,00 no PIX ou em 10x R$39,00',
     inscricaoHabilitada: true,
     iframe: true,
     ementa: [
@@ -85,9 +85,14 @@ const cursos = [
       },
     ],
     instrutora: {
-      nome: 'Djenane Santos',
-      cargo: 'Co-founder da ProduterasBR Academy',
+      nome: 'Djenane C. S. Santos',
+      cargo: 'Co-founder e General Manager da ProduterasBR Academy',
       foto: '/Djenane.png',
+      experiencia: '10+ anos em produtos digitais (Banco de Dados, Business Intelligence, Scrum Master, Product Owner e Product Manager)',
+      especialidades: ['IA Product Manager', 'Gestão Ágil', 'SaaS', 'B2B', 'B2B2C', 'B2G'],
+      formacao: ['Bacharel e Mestre em Ciência da Computação – UNIFEI', 'MBA em Liderança e Inovação - FGV'],
+      bio: 'Tem como diferencial a capacidade de traduzir necessidades complexas em soluções digitais escaláveis, combinando métricas (OKRs/KPIs), estratégia data-driven e liderança humanizada para guiar times ágeis de ponta a ponta, do discovery ao delivery. Atua na interseção entre negócio, tecnologia e UX: onde surgem os insights que transformam produtos em motores de crescimento. Tem como propósito desenvolver produtos que melhoram a vida das pessoas: com tecnologia, empatia e visão de futuro.',
+
     },
   },
   {
@@ -112,7 +117,7 @@ const cursos = [
     tempo: '8h de conteúdo',
     encontros: '4 encontros',
     data: '31 de janeiro a 07 de março de 2026',
-    preco: '10x R$58,00 ou R$522,00 no PIX',
+    preco: 'R$522,00 no PIX ou em 10x R$58,00',
     inscricaoHabilitada: true,
     iframe: true,
     ementa: [
@@ -141,13 +146,14 @@ const cursos = [
       },
     ],
     instrutora: {
-      nome: 'Djenane Santos',
-      cargo: 'Co-founder da ProduterasBR Academy',
+      nome: 'Djenane C. S. Santos',
+      cargo: 'Co-founder e General Manager da ProduterasBR Academy',
       foto: '/Djenane.png',
-      experiencia: '8+ anos em produtos digitais (backend, web e mobile)',
-      especialidades: ['Produtos financeiros', 'Pagamentos', 'BaaS', 'SaaS', 'B2B2C', 'B2B'],
-      formacao: 'Pós-graduação em Gestão Estratégica de Negócios – Mackenzie',
-      bio: 'Atua na interseção entre tecnologia, negócio e produto, conectando decisões técnicas a impacto real.',
+      experiencia: '10+ anos em produtos digitais (Banco de Dados, Business Intelligence, Scrum Master, Product Owner e Product Manager)',
+      especialidades: ['IA Product Manager', 'Gestão Ágil', 'SaaS', 'B2B', 'B2B2C', 'B2G'],
+      formacao: ['Bacharel e Mestre em Ciência da Computação – UNIFEI', 'MBA em Liderança e Inovação - FGV'],
+      bio: 'Tem como diferencial a capacidade de traduzir necessidades complexas em soluções digitais escaláveis, combinando métricas (OKRs/KPIs), estratégia data-driven e liderança humanizada para guiar times ágeis de ponta a ponta, do discovery ao delivery. Atua na interseção entre negócio, tecnologia e UX: onde surgem os insights que transformam produtos em motores de crescimento. Tem como propósito desenvolver produtos que melhoram a vida das pessoas: com tecnologia, empatia e visão de futuro.',
+
     },
   },
   {
@@ -172,7 +178,7 @@ const cursos = [
     tempo: '8h de conteúdo',
     encontros: '4 encontros',
     data: '15 de janeiro de 2026',
-    preco: '10x R$42,00 ou R$378,00 no PIX',
+    preco: 'R$378,00 no PIX ou em 10x R$42,00',
     inscricaoHabilitada: true,
     iframe: true,
     ementa: [
@@ -199,7 +205,7 @@ const cursos = [
     ],
     instrutora: {
       nome: 'Melina Nobrega',
-      cargo: 'Co-founder da ProduterasBR Academy | Product Manager',
+      cargo: 'GPM | Senior Product Manager | Produtos Digitais Financeiros | Fintech, Pagamentos, Crédito, Risco, BaaS, Conta Digital',
       foto: '/melina.jpeg',
       experiencia: '8+ anos em produtos digitais (backend, web e mobile)',
       especialidades: ['Produtos financeiros', 'Pagamentos', 'BaaS', 'SaaS', 'B2B2C', 'B2B'],

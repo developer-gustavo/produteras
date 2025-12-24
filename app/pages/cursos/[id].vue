@@ -176,34 +176,53 @@ const curso = cursoEncontrado
               {{ curso.instrutora.bio }}
             </p>
 
-            <div
-              v-if="curso.instrutora.formacao || curso.instrutora.experiencia"
-              class="mt-8 grid gap-4 sm:grid-cols-2"
-            >
-              <div
-                v-if="curso.instrutora.experiencia"
-                class="rounded-xl bg-slate-800 p-4"
-              >
-                <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">
-                  Experiência
-                </p>
-                <p class="mt-1 text-sm text-slate-200">
-                  {{ curso.instrutora.experiencia }}
-                </p>
-              </div>
+<div
+  v-if="curso.instrutora.formacao || curso.instrutora.experiencia"
+  class="mt-8 flex w-full flex-col gap-4"
+>
+  <div
+    v-if="curso.instrutora.experiencia"
+    class="w-full rounded-xl bg-slate-800 p-5"
+  >
+    <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">
+      Experiência
+    </p>
+    <p class="mt-2 text-sm leading-relaxed text-slate-200">
+      {{ curso.instrutora.experiencia }}
+    </p>
+  </div>
 
-              <div
-                v-if="curso.instrutora.formacao"
-                class="rounded-xl bg-slate-800 p-4"
-              >
-                <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">
-                  Formação
-                </p>
-                <p class="mt-1 text-sm text-slate-200">
-                  {{ curso.instrutora.formacao }}
-                </p>
-              </div>
-            </div>
+  <div
+    v-if="curso.instrutora.formacao"
+    class="w-full rounded-xl bg-slate-800 p-5"
+  >
+    <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">
+      Formação
+    </p>
+
+    <ul
+      v-if="Array.isArray(curso.instrutora.formacao)"
+      class="mt-2 space-y-2 text-sm text-slate-200"
+    >
+      <li
+        v-for="(item, index) in curso.instrutora.formacao"
+        :key="index"
+        class="flex items-start gap-2"
+      >
+        <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+        <span>{{ item }}</span>
+      </li>
+    </ul>
+
+    <p
+      v-else
+      class="mt-2 text-sm text-slate-200"
+    >
+      {{ curso.instrutora.formacao }}
+    </p>
+  </div>
+</div>
+
 
             <div
               v-if="curso.instrutora.especialidades?.length"

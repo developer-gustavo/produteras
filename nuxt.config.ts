@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 
-const { PRODUCTION, SITE_URL, DEV_URL, DEV_KEY, DEV_CERT } = process.env
+const { PRODUCTION, SITE_URL } = process.env
 
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/seo', '@vueuse/nuxt'],
@@ -18,10 +18,7 @@ export default defineNuxtConfig({
     production: PRODUCTION,
     url: SITE_URL,
   },
-  devServer: {
-    // host: DEV_URL,
-    // https: DEV_KEY && DEV_CERT ? { key: DEV_KEY, cert: DEV_CERT } : undefined,
-  },
+
   compatibilityDate: '2025-08-01',
   nitro: { experimental: { asyncContext: true } },
   vite: { plugins: [tailwindcss()] },
